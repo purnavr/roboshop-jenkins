@@ -8,6 +8,14 @@ terraform {
   }
 }
 
+#terraform {
+#  required_providers {
+#    jenkins = {
+#      source = "registry.terraform.io/taiidani/jenkins"
+#    }
+#  }
+#}
+
 
 provider "jenkins" {
   server_url = "http://3.81.84.229:8080/"
