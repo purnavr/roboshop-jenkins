@@ -1,5 +1,5 @@
 variable "folders" {
-  default = [infra]
+  default = ["infra"]
 }
 
 variable "jobs" {
