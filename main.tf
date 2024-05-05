@@ -21,3 +21,8 @@ resource "jenkins_job" "job" {
     repo_url = var.jobs[count.index].repo_url
   })
 }
+
+ifecycle {
+  ignore_changes = [template]
+}
+
