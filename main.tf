@@ -20,9 +20,11 @@ resource "jenkins_job" "job" {
   template = templatefile("${path.module}/sb-job.xml", {
     repo_url = var.jobs[count.index].repo_url
   })
+
+  ifecycle {
+    ignore_changes = [template]
+  }
 }
 
-ifecycle {
-  ignore_changes = [template]
-}
+
 
