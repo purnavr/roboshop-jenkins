@@ -14,6 +14,8 @@ resource "jenkins_folder" "folders" {
 #}
 
 resource "jenkins_job" "job" {
+  depends_on = [jenkins_folder.folders]
+
   count = length(var.jobs)
   name     = var.jobs[count.index].name
   folder   = "/job/${lookup(element(var.jobs, count.index ), "folder", null )}"
