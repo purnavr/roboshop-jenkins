@@ -23,9 +23,9 @@ resource "jenkins_job" "job" {
     repo_url = var.jobs[count.index].repo_url
   })
 
-#  lifecycle {
-#    ignore_changes = [template]
-#  }
+  lifecycle {
+    ignore_changes = [template]
+  }
 }
 
 
