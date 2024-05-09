@@ -28,17 +28,17 @@ resource "jenkins_job" "job" {
   }
 }
 
-#data "aws_instance" "jenkins" {
-#  instance_id = "i-0c3412def8affb72e"
-#}
-#
-#resource "aws_route53_record" "www" {
-#  zone_id = "Z01280802SKTCPOFIGWX3"
-#  name    = "jenkins.roboz.online"
-#  type    = "A"
-#  ttl     = 30
-#  records = [data.aws_instance.jenkins.public_ip]
-#}
+data "aws_instance" "jenkins" {
+  instance_id = "i-0c3412def8affb72e"
+}
+
+resource "aws_route53_record" "www" {
+  zone_id = "Z01280802SKTCPOFIGWX3"
+  name    = "jenkins.roboz.online"
+  type    = "A"
+  ttl     = 30
+  records = [data.aws_instance.jenkins.public_ip]
+}
 
 
 
