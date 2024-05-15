@@ -5,7 +5,7 @@
     <properties>
         <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
             <triggers>
-                <org.jenkinsci.plugins.gwt.GenericTrigger plugin="generic-webhook-trigger@2.2.1">
+                <org.jenkinsci.plugins.gwt.GenericTrigger plugin="generic-webhook-trigger">
                     <spec></spec>
                     <regexpFilterText></regexpFilterText>
                     <regexpFilterExpression></regexpFilterExpression>
