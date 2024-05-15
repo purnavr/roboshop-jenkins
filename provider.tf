@@ -1,20 +1,19 @@
 # Configure the Jenkins Provider
-#terraform {
-#  required_providers {
-#    jenkins = {
-#      source = "taiidani/jenkins"
-#      version = "0.10.2"
-#    }
-#  }
-#}
-
 terraform {
   required_providers {
     jenkins = {
-      source = "registry.terraform.io/taiidani/jenkins"
+      source = "taiidani/jenkins"
     }
   }
 }
+
+#terraform {
+#  required_providers {
+#    jenkins = {
+#      source = "registry.terraform.io/taiidani/jenkins"
+#    }
+#  }
+#}
 
 
 provider "jenkins" {
