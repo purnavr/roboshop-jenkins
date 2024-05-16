@@ -29,7 +29,7 @@ resource "jenkins_job" "job" {
 #  lifecycle {
 #    ignore_changes = [template]
 #  }
-}
+#}
 
 data "aws_instance" "jenkins" {
   instance_id = "i-0c3412def8affb72e"
