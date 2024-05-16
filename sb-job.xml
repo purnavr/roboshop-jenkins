@@ -1,9 +1,9 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <flow-definition plugin="workflow-job">
+    <actions/>
     <description></description>
     <keepDependencies>false</keepDependencies>
-    <properties/>
-    <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps">
+    <properties>
         <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
             <triggers>
                 <org.jenkinsci.plugins.gwt.GenericTrigger plugin="generic-webhook-trigger">
@@ -22,6 +22,8 @@
                 </org.jenkinsci.plugins.gwt.GenericTrigger>
             </triggers>
         </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+    </properties>
+    <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps">
         <scm class="hudson.plugins.git.GitSCM" plugin="git">
             <configVersion>2</configVersion>
             <userRemoteConfigs>
@@ -44,3 +46,4 @@
     <triggers/>
     <disabled>false</disabled>
 </flow-definition>
+
