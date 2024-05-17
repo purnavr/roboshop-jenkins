@@ -30,10 +30,18 @@
 #  name = "jenkins.pass"
 #}
 
+#terraform {
+#  required_providers {
+#    jenkins = {
+#      source = "registry.terraform.io/taiidani/jenkins"
+#    }
+#  }
+#}
+
 terraform {
   required_providers {
     jenkins = {
-      source = "registry.terraform.io/taiidani/jenkins"
+      source = "taiidani/jenkins"
     }
   }
 }
