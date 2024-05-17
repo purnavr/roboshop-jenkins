@@ -3,9 +3,6 @@ resource "jenkins_folder" "folders" {
   name = var.folders[count.index]
 }
 
-
-
-
 resource "jenkins_job" "job" {
   depends_on = [jenkins_folder.folders]
 
