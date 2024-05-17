@@ -57,12 +57,12 @@ resource "jenkins_job" "jobs" {
 }
 
 data "aws_instance" "jenkins" {
-  instance_id = "i-09e791412076778a9"
+  instance_id = "i-0c3412def8affb72e"
 }
 
 resource "aws_route53_record" "www" {
-  zone_id = "Z0519871SX8ZUH6ORUV5"
-  name    = "jenkins.devtb.online"
+  zone_id = "Z01280802SKTCPOFIGWX3"
+  name    = "jenkins.roboz.online"
   type    = "A"
   ttl     = 30
   records = [data.aws_instance.jenkins.public_ip]
