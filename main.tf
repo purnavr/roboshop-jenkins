@@ -48,6 +48,7 @@ resource "jenkins_job" "jobs" {
 
   template = templatefile("${path.module}/sb-job.xml", {
     repo_url = lookup(element(var.jobs, count.index), "repo_url", null)
+    name = lookup(element(var.jobs, count.index), "name", null)
   })
 
   lifecycle {
