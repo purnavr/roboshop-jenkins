@@ -6,12 +6,12 @@ resource "jenkins_folder" "folders" {
 resource "jenkins_job" "s-job" {
   depends_on = [jenkins_folder.folders]
 
-  count = length(var.jobs)
-  name     = var.jobs[count.index].name
-  folder   = "/job/${lookup(element(var.jobs, count.index ), "folder", null )}"
+  count = length(var.s-jobs)
+  name     = var.s-jobs[count.index].name
+  folder   = "/job/${lookup(element(var.s-jobs, count.index ), "folder", null )}"
   template = templatefile("${path.module}/sb-job.xml", {
-    repo_url = var.jobs[count.index].repo_url
-    name = var.jobs[count.index].name
+    repo_url = var.s-jobs[count.index].repo_url
+    name = var.s-jobs[count.index].name
   })
 
   lifecycle {
