@@ -30,9 +30,9 @@ resource "jenkins_job" "m-job" {
     name = var.m-jobs[count.index].name
   })
 
-  lifecycle {
-    ignore_changes = [template]
-  }
+#  lifecycle {
+#    ignore_changes = [template]
+#  }
 }
 
 data "aws_instance" "jenkins" {
