@@ -12,6 +12,7 @@ resource "jenkins_job" "s-job" {
   template = templatefile("${path.module}/sb-job.xml", {
     repo_url = var.s-jobs[count.index].repo_url
     name = var.s-jobs[count.index].name
+    filename = var.s-jobs[count.index].filename
   })
 
   lifecycle {
