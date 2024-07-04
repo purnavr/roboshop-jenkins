@@ -19,3 +19,7 @@ variable "s-jobs" {
     { name = "App-Deployment", folder = "infra", repo_url = "https://github.com/purnavr/roboshop-ansible.git", filename = "Jenkinsfile-deployment.groovy" }
   ]
 }
+
+variable "force" {
+  default = false
+}
