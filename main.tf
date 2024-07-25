@@ -50,7 +50,7 @@ resource "aws_route53_record" "www" {
 
 resource "aws_key_pair" "minikube_keypair" {
   key_name = "test_key"
-  public_key = file("/etc/ssh/id_rsa.pub")
+  public_key = file("/etc/testkey/id_rsa.pub")
 }
 
 #resource "jenkins_folder" "folders" {
