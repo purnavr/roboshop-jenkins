@@ -48,6 +48,11 @@ resource "aws_route53_record" "www" {
   records = [data.aws_instance.jenkins.public_ip]
 }
 
+resource "aws_key_pair" "minikube_keypair" {
+  key_name = "test_key"
+  public_key = file("/etc/ssh/id_rsa.pub")
+}
+
 #resource "jenkins_folder" "folders" {
 #  count = length(var.folders)
 #  name = element(var.folders, count.index)
