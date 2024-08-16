@@ -10,6 +10,7 @@ variable "m-jobs" {
     { name = "cart", folder = "CI-pipeline", repo_url = "https://github.com/purnavr/cart.git" },
     { name = "shipping", folder = "CI-pipeline", repo_url = "https://github.com/purnavr/shipping.git" },
     { name = "payment", folder = "CI-pipeline", repo_url = "https://github.com/purnavr/payment.git" },
+    { name = "aws-ssm-param-store", folder = "CI-pipeline", repo_url = "https://github.com/purnavr/aws-ssm-param-store.git" },
   ]
 }
 
