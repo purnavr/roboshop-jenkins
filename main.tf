@@ -41,7 +41,7 @@ data "aws_instance" "jenkins" {
 }
 
 resource "aws_route53_record" "www" {
-  zone_id = "Z01280802SKTCPOFIGWX3"
+  zone_id = "Z060267121PGG1YBBJD4E"
   #name    = "jenkins.roboz.online"
   name    = "jenkins.roboz.in.net"
   type    = "A"
